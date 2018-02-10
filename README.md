@@ -25,9 +25,9 @@ A CryptoTracker project which tracks current cryptocurrencies and visualises pre
 <h2>week 3</h2>
 
 
-- [ ]  Design the 50 of the Website
+- [ ]  Design the 50% of the Website
 
 
 <h2>week 4</h2>
 
-- [ ]  Design the 50 of the Website
+- [ ]  Design the 50% of the Website
