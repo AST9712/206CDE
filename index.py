@@ -27,7 +27,8 @@ def log_in():
 
 
 @app.route('/upload', methods=['POST','GET'])
-def upload_file()
+def upload_file():
+    
     if request.method == 'POST': 
         f = request.files['the files']
         f.save['/var/upload/file/uploaded_files.txt']
