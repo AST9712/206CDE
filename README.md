@@ -8,8 +8,8 @@ A CryptoTracker project which tracks current cryptocurrencies and visualises pre
 
 <h2>week 1</h2>
 
-- [ ]  Set up Server
-- [ ]  Set up DateBase - Mongodb
+- [X]  Set up Server
+- [X]  Set up DateBase - MySQL
 
 
 <h2>week 2</h2>
