@@ -7,13 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-	<h1>hey</h1>
-<ul>
+	<h1>Tesdsst</h1>
 	
-	{% for i in s %}
-		<li>i</li>
+		<select>
+	{% for i in cc_names %}
+ 		 <option value="{{i}}">{{i}}</option>
 	{% endfor %}
-</ul>
+		</select>
+
+
+	<ul>
+
+	{% for currency in ccurencies %}
+	 <li>{{currency.name}}</li>
+	 <li>hey</li>
+	{% endfor %}
+
+	</ul>
+
     
 </body>
 </html>

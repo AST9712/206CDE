@@ -14,12 +14,18 @@ def index():
     # cur.execute('''SELECT user, host FROM mysql.user''')
     # all_users = cur.fetchall()
     a = Currencies()
-    s = a.names()
-    return render_template('index.html', s = s)
+    cc_names    = sorted(a.names())
+    ccurrencies = a.rates()
+    print (type(ccurrencies))
+    return render_template('index.html', cc_names = cc_names,
+                                         ccurrencies=ccurrencies
+                                         )
+
+
 
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 
 
