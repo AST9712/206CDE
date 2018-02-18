@@ -1,4 +1,5 @@
 
+from bokeh.plotting import figure, output_file, show
 import requests
 
 
@@ -16,7 +17,7 @@ class Currencies:
 		names = []
 
 		for currency in data:
-			names.append(currency['name'])	
+			names.append(currency['name'])
 		return names
 
 
@@ -36,10 +37,23 @@ class Currencies:
 		''' will return the rates '''
 		pass
 
+	def x_axis(self):
+		response = requests.get(self.url, headers=self.headers)
+		data 	 = response.json()
+		names = []
+		for currency in data:
+			names.append(currency['name'])	
+
+		return x
 
 
 
 
 
+
+class Tables:
+
+	def __init__(self):
+		pass
 
 
