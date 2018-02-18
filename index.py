@@ -21,7 +21,6 @@ def index():
         'cc_names' : cc_names,
         'ccurrencies' : ccurrencies
     }
-    print (type(ccurrencies))
     return render_template('index.html',items= items)
 
 @app.route('/')

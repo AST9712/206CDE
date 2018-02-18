@@ -8,21 +8,32 @@
 </head>
 <body>
 	<h1>TEST</h1>
-		<select>
+		<select id="choice" onchange="change_func()" >
 		{% for i in items.cc_names %}
- 		<option value="{{i}}">{{i}}</option>
+ 		<option value="{{i}}" >{{i}}</option>
 		{% endfor %}
 		</select>
-
-
+		<p id="this_is_sparta"></p>
+<hr>
+<br>
 
 
 	<ul>
 	{% for currency in items.ccurrencies %}
-
-	 <li>{{currency.name}} , {{currency.website}}</li>
+	 <li>{{currency.name}}</li>
+	 <li><a href="{{currency.website}}">{{currency.website}}</a></li>
 	{% endfor %}
 	</ul>
-	<p>please...</p>
+
+
+	<script>
+	function change_func(){
+		let x = document.getElementById('choice').value;
+		document.getElementById('this_is_sparta').innerHTML = 'This is ' + x;
+
+	}
+
+	
+	</script>
 </body>
 </html>
