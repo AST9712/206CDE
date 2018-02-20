@@ -24,16 +24,17 @@
 	 <li><a href="{{currency.website}}">{{currency.website}}</a></li>
 	{% endfor %}
 	</ul>
-
+	<div>
+		<embed type="image/svg+xml" src="{{items.bar_chart | safe}}" style="max-width: 1000px;" >
+			
+		</embed>
+	</div>
 
 	<script>
 	function change_func(){
-		let x = document.getElementById('choice').value;
-		document.getElementById('this_is_sparta').innerHTML = 'This is ' + x;
-
+		let x = document.getElementById('choice').value
+		document.getElementById('this_is_sparta').innerHTML = 'This is ' + x
 	}
-
-	
 	</script>
 </body>
 </html>
