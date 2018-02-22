@@ -4,13 +4,13 @@ from data import Currencies
 
 
 app = Flask(__name__)
-# mysqsdl = MySQL(app) 
+# mysqsdl = MySQL(app)
 
 
 
 @app.route('/') #home page
 def index():
-    # cur = mysql.connection.cursor() 
+    # cur = mysql.connection.cursor()
     # cur.execute('''SELECT user, host FROM mysql.user''')
     # all_users = cur.fetchall()
     a = Currencies()
@@ -36,5 +36,3 @@ def page_not_found(error):
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
