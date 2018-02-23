@@ -3,7 +3,7 @@ from flask import Flask , render_template
 from data import Currencies
 
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder="static")
 # mysqsdl = MySQL(app)
 
 
@@ -14,23 +14,24 @@ def index():
     # cur.execute('''SELECT user, host FROM mysql.user''')
     # all_users = cur.fetchall()
     a = Currencies()
-    hey = 'hey'
     cc_names    = sorted(a.names())
     ccurrencies = a.rates()
     items = {
-
         'cc_names' : cc_names,
         'ccurrencies' : ccurrencies
-
     }
     return render_template('index.html',items= items)
 
-
+@app.route('/currencies/<name>')
+def currencies():
+    coinlist = CryptocompareMOD()
+    coinlist = coinlist.coinlist()
+    return coinlist
 
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('page_not_found.html'), 404
+    return render_template('page_not_found.html'),404
 
 
 

@@ -1,4 +1,3 @@
-
 import requests
 import pygal
 import json
@@ -88,35 +87,6 @@ class Currencies:
 		return ex_rate
 
 
-
-
-class Tables:
-
-	def __init__(self):
-		pass
-
-
-	def graphtest(self):
-
-		#Then create a bar graph object
-		bar_chart = pygal.Line()
-		#Add some values
-		bar_chart.add('Bit Coin',[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
-		bar_chart = bar_chart.render_data_uri()
-
-		return bar_chart
-
-
-
-
-'''
-make a list of the Currencies
-and try to make a db
-
-'''
-
-
-
 class CryptocompareAPI(object):
 	"""Cryptocurrencies using APIS... """
 	def __init__(self):
@@ -137,8 +107,10 @@ class CryptocompareMOD(object):
 		pass
 
 	def coinlist(self):
-		s = cryptocompare.get_coin_list(format=False)
-		print (json.dumps(s, indent=4, sort_keys=True))
+		coins = cryptocompare.get_coin_list(format=False)
+		print (json.dumps(coins, indent=4, sort_keys=True))
+
+		return coins
 
 	def ccompare(self):
 		pass
@@ -148,7 +120,3 @@ class CryptocompareMOD(object):
 
 	def __str__(self):
 		return 'cryptocompare module'
-
-
-a = CryptocompareMOD()
-a.coinlist()
