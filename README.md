@@ -19,7 +19,7 @@ A CryptoTracker project which tracks current cryptocurrencies and visualises pre
         <li>Pandas</li>
         <li>numpy</li>
         <li>matplotlib</li>
-        <li>geoplotlib</li>
+        <li>Pygal</li>
     </ul>
 
 <h2>week 3</h2>
