@@ -4,22 +4,27 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="">
 
-    <title>Document</title>
+    <title>Flask-currency</title>
 </head>
 <body>
-	<h1>TEST MANES SAS </h1>
-		<select id="choice" onchange="change_func()" >
+	<h1>TEST MANES SASS </h1>
+		<select id="choice" onchange="change_func(this)" >
 		{% for i in items.cc_names %}
  		<option value="{{i}}" >{{i}}</option>
 		{% endfor %}
 		</select>
 		<p id="this_is_sparta"></p>
-        <button id="test" type="button" name="button" onclick=""> ok !</button>
+        <button id="test"  type="button" name="button" onclick=""> ok !</button>
 <hr>
 <br>
-
+		<a href="" target=""></a>
+		<img src="" alt="">
+		<iframe src="" frameborder="0"></iframe>
+		<video src=""></video>
+		mov
 
 	<ul>
 	{% for currency in items.ccurrencies %}
@@ -27,11 +32,7 @@
 	 <li><a href="{{currency.website}}">{{currency.website}}</a></li>
 	{% endfor %}
 	</ul>
-	<div>
-		<embed type="image/svg+xml" src="{{items.bar_chart | safe}}" style="max-width: 1000px;" >
 
-		</embed>
-	</div>
 
 	<script src="{{ url_for('static', filename='xml.js') }}"></script>
 </body>

@@ -22,7 +22,7 @@ def index():
     }
     return render_template('index.html',items= items)
 
-@app.route('/currencies/<name>')
+@app.route('/currencies/<int:name>')
 def currencies():
     coinlist = CryptocompareMOD()
     coinlist = coinlist.coinlist()
@@ -37,3 +37,14 @@ def page_not_found(error):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+
+
+def test(*args):
+    for i in args:
+        print (i)
+
+
+test(1,2,4,'test', 'goodmorning')

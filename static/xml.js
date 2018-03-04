@@ -1,9 +1,10 @@
-document.getElementById('test').addEventListener('click', () => {
-	console.log('tessssst')
+
+document.getElementById('choice').addEventListener('change', (x) => {
+	console.log(x.value)
 })
 
 
-
-document.getElementById('choice').addEventListener('change', () => {
-	console.log('this is spartaaa!')
-})
+function change_func(x) {
+	document.getElementById('choice').addEventListener.value
+	console.log(x.value)
+}
